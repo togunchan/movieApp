@@ -12,7 +12,7 @@ export class MoviesComponent {
     selectedMovie: Movie;
 
     //"Dependency injection" belirtmek için yapıcı değişkeni "private" olmalı
-    constructor(private movieService: MovieService) {}
+    constructor(private movieService: MovieService) { }
 
     ngOnInit(): void {
         //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
@@ -25,11 +25,19 @@ export class MoviesComponent {
     }
 
     getMovies(): void {
-         this.movieService.getMovies()
-                    .subscribe(movies =>{
-                        this.movies = movies;
-                    });
-        
+        this.movieService.getMovies()
+            .subscribe(movies => {
+                this.movies = movies;
+            });
+
+    }
+
+    add(name: string, imageUrl: string, description: string) {
+        this.movieService.add({
+            name,
+            imageUrl,
+            description
+        }as Movie).subscribe(movie=>this.movies.push(movie));
     }
 
 }

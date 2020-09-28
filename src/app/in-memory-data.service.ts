@@ -12,8 +12,8 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 3, name: "movie 3", description: "güzel film", imageUrl: "3.jpg" },
       { id: 4, name: "movie 4", description: "güzel film", imageUrl: "4.jpg" },
       { id: 5, name: "movie 5", description: "güzel film", imageUrl: "5.jpg" },
-      { id: 5, name: "movie 5", description: "güzel film", imageUrl: "6.jpg" },
-      { id: 5, name: "movie 5", description: "güzel film", imageUrl: "7.jpg" }
+      { id: 6, name: "movie 6", description: "güzel film", imageU7l: "6.jpg" },
+      { id: 5, name: "movie 7", description: "güzel film", imageUrl: "7.jpg" }
     ];
     return { movies };
   }
